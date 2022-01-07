@@ -4,6 +4,7 @@
     <PreferenceCategory
         android:title="Настройки игры"
         android:icon="@drawable/set"
+        android:layout="@layout/settings_layout2"
         >
 
         <ListPreference
@@ -28,7 +29,8 @@
     </PreferenceCategory>
 
     <PreferenceCategory app:title="Об Авторе"
-        android:icon="@drawable/author">
+        android:icon="@drawable/author"
+        android:layout="@layout/settings_layout2">
 
         <Preference
             android:layout="@layout/settings_layout"

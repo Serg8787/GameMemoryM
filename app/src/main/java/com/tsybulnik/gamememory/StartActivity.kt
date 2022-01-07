@@ -9,6 +9,7 @@ class StartActivity : AppCompatActivity() {
     lateinit var butStart:Button
     lateinit var butExit:Button
     lateinit var butettings:Button
+    lateinit var butScore:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
@@ -26,6 +27,10 @@ class StartActivity : AppCompatActivity() {
         butettings.setOnClickListener {
             val intent = Intent(this,SettingsActivity::class.java)
             startActivity(intent)
+        }
+        butScore = findViewById(R.id.butScore)
+        butScore.setOnClickListener {
+            throw RuntimeException("mistake")
         }
     }
 }

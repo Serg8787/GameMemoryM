@@ -15,6 +15,6 @@
     </style>
 
     <style name="Theme.Set" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:background">#E040FB</item>
+        <item name="android:background">#B2FF59</item>
     </style>
 </resources>

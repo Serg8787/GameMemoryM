@@ -19,6 +19,10 @@
     <string name="Color">colors</string>
     <string name="Collection">collection_images</string>
     <string name="setTitle">settings</string>
+    <string name="start">START</string>
+    <string name="settings">SETTINGS</string>
+    <string name="highscore">HIGHSCORE</string>
+    <string name="exit">EXIT</string>
 
     <string-array name="collections">
         <item>animal</item>

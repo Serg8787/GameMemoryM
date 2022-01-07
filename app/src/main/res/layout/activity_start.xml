@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@android:color/holo_purple"
-    android:gravity="center_vertical|center_horizontal"
-    >
+    android:gravity="center_vertical|center_horizontal">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/butStart"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:background="@drawable/style"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/black"
         style="@style/ButtonText"
-        android:text="START"
+        android:text="@string/start"
         android:layout_margin="10dp"
         android:width="200dp"
         />
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:background="@drawable/style"
         style="@style/ButtonText"
-        android:text="SETTINGS"
+        android:text="@string/settings"
         android:width="200dp"
         android:layout_margin="10dp"
         />
@@ -35,7 +36,7 @@
         android:layout_width="wrap_content"
         android:background="@drawable/style"
         style="@style/ButtonText"
-        android:text="HIGHSCORE"
+        android:text="@string/highscore"
         android:width="200dp"
         android:layout_margin="10dp"
         />
@@ -46,7 +47,7 @@
         android:layout_width="wrap_content"
         android:backgroundTint = "@drawable/back"
         style="@style/ButtonText"
-        android:text="EXIT"
+        android:text="@string/exit"
         android:width="200dp"
         android:layout_margin="10dp"
         />
