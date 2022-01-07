@@ -1,0 +1,31 @@
+package com.tsybulnik.gamememory
+
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+
+class StartActivity : AppCompatActivity() {
+    lateinit var butStart:Button
+    lateinit var butExit:Button
+    lateinit var butettings:Button
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_start)
+
+        butStart = findViewById(R.id.butStart)
+        butStart.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+        butExit = findViewById(R.id.butExit)
+        butExit.setOnClickListener {
+            finish()
+        }
+        butettings = findViewById(R.id.butSettings)
+        butettings.setOnClickListener {
+            val intent = Intent(this,SettingsActivity::class.java)
+            startActivity(intent)
+        }
+    }
+}

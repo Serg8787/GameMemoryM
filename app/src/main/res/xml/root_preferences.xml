@@ -1,0 +1,63 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Настройки игры"
+        android:icon="@drawable/set"
+        >
+
+        <ListPreference
+            android:dialogTitle="Выберите иконки для игры"
+            android:key="PictureCollection"
+            android:title="Наборы картинок для игры"
+            android:entries="@array/collectionsTitle"
+            android:entryValues="@array/collections"
+            android:defaultValue="animal"
+            android:layout="@layout/settings_layout"
+            />
+
+        <ListPreference
+            android:key="Наборы полей"
+            android:dialogTitle="Уровень сложности"
+            android:title="Уровень сложности"
+            android:entries="@array/intSquare"
+            android:entryValues="@array/intSquareTitle"
+            android:defaultValue="6*6"
+            android:layout="@layout/settings_layout"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Об Авторе"
+        android:icon="@drawable/author">
+
+        <Preference
+            android:layout="@layout/settings_layout"
+            android:title="Все проекты автора"
+            >
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Serg8787?tab=repositories"
+                />
+        </Preference>
+        <Preference
+            android:title="Написать автору в Telegram"
+            android:layout="@layout/settings_layout">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://t.me/SergTsubulnik"
+                />
+        </Preference>
+        <Preference
+            android:title="Страница на Play Market"
+            android:layout="@layout/settings_layout">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/developer?id=Tsybulnik+Sergei"
+                />
+            >
+
+
+        </Preference>
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

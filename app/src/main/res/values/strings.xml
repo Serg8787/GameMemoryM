@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">GameMemory</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="Color">colors</string>
+    <string name="Collection">collection_images</string>
+    <string name="setTitle">settings</string>
+
+    <string-array name="collections">
+        <item>animal</item>
+        <item>fruit</item>
+        <item>cake</item>
+    </string-array>
+
+    <string-array name="collectionsTitle">
+        <item>Животные</item>
+        <item>Фрукты</item>
+        <item>Тортики-пирожные</item>
+    </string-array>
+
+    <string-array name="intSquareTitle">
+        <item>3 * 2</item>
+        <item>4 * 3</item>
+        <item>4 * 4</item>
+        <item>5 * 4</item>
+        <item>6 * 4</item>
+        <item>5 * 6</item>
+        <item>6 * 6</item>
+    </string-array>
+
+    <string-array name="intSquare">
+        <item>3 * 2</item>
+        <item>4 * 3</item>
+        <item>4 * 4</item>
+        <item>5 * 4</item>
+        <item>6 * 4</item>
+        <item>5 * 6</item>
+        <item>6 * 6</item>
+    </string-array>
+</resources>

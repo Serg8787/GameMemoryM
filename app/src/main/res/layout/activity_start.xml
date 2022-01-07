@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/holo_purple"
+    android:gravity="center_vertical|center_horizontal"
+    >
+
+    <Button
+        android:id="@+id/butStart"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/style"
+        style="@style/ButtonText"
+        android:text="START"
+        android:layout_margin="10dp"
+        android:width="200dp"
+        />
+
+    <Button
+        android:id="@+id/butSettings"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/style"
+        style="@style/ButtonText"
+        android:text="SETTINGS"
+        android:width="200dp"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/butScore"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/style"
+        style="@style/ButtonText"
+        android:text="HIGHSCORE"
+        android:width="200dp"
+        android:layout_margin="10dp"
+        />
+
+    <Button
+        android:id="@+id/butExit"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:backgroundTint = "@drawable/back"
+        style="@style/ButtonText"
+        android:text="EXIT"
+        android:width="200dp"
+        android:layout_margin="10dp"
+        />
+</LinearLayout>
