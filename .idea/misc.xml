@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/drawable-v24/style.xml" value="0.23333333333333334" />
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/drawable/back.xml" value="0.17708333333333334" />
+        <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/drawable/highscore.xml" value="0.225" />
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/drawable/roundedbutton.xml" value="0.225" />
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/layout-land/activity_main.xml" value="0.18386243386243387" />
+        <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/layout/activity_high_score.xml" value="0.19635416666666666" />
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/layout/activity_start.xml" value="0.2171875" />
         <entry key="..\:/Users/serg/AndroidStudioProjects/GameMemory2/app/src/main/res/layout/settings_activity.xml" value="0.25416666666666665" />

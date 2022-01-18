@@ -22,4 +22,14 @@
         <item name="android:shadowDy">2</item>
         <item name="android:shadowRadius">3</item>
     </style>
+    <style name="HighScoreText">
+        <item name="android:textColor">#070707</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">1dp</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/highscore</item>
+
+    </style>
 </resources>

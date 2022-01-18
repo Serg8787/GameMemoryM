@@ -30,7 +30,8 @@ class StartActivity : AppCompatActivity() {
         }
         butScore = findViewById(R.id.butScore)
         butScore.setOnClickListener {
-            throw RuntimeException("mistake")
+            val intent = Intent(this,HighScoreActivity::class.java)
+            startActivity(intent)
         }
     }
 }
