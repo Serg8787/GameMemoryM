@@ -32,4 +32,7 @@
         <item name="android:background">@drawable/highscore</item>
 
     </style>
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_dialog</item>
+    </style>
 </resources>

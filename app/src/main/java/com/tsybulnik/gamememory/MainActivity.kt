@@ -1,15 +1,17 @@
 package com.tsybulnik.gamememory
 
-import android.content.res.Configuration
-import android.content.res.Configuration.*
+
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import android.content.DialogInterface
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
-import kotlinx.coroutines.*
+
+
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -19,12 +21,16 @@ class MainActivity : AppCompatActivity() {
     lateinit var mTimeScreen: Chronometer
     var stepCount = 0
     var mCols:Int = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val job = Job()
-        val uiScope = CoroutineScope(Dispatchers.Main + job)
+
+
+
+
+
 
         val preference = PreferenceManager.getDefaultSharedPreferences(this)
         val images = preference.getString("PictureCollection","animal")
@@ -34,9 +40,6 @@ class MainActivity : AppCompatActivity() {
 
         mTimeScreen = findViewById(R.id.chronometr);
         mStepScreen = findViewById(R.id.stepview);
-        mStepScreen.text = stepCount.toString()
-
-        mTimeScreen.start()
 
         mGrid = findViewById(R.id.gridView)
         mGrid.setNumColumns(mCols)
@@ -54,16 +57,12 @@ class MainActivity : AppCompatActivity() {
                 position: Int,
                 id: Long
             ) {
+                mTimeScreen.start()
                 mAdapter.checkOpenCells();
 
                 if (mAdapter.openCell(position)) {
                     stepCount++;
                     mStepScreen.setText(stepCount.toString())
-                }
-                uiScope.launch(Dispatchers.Main){
-                    delay(2000)
-
-                    //perform second operation
                 }
                 if (mAdapter.checkGameOver()) {
                     mTimeScreen.stop()
@@ -75,22 +74,32 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun ShowGameOver() {
-        val alertbox: AlertDialog.Builder = AlertDialog.Builder(this)
-
-        // Заголовок и текст
-        alertbox.setTitle("Поздравляем!")
         val time = mTimeScreen.text.toString()
-        val TextToast =
-            "Игра закончена nХодов: " + stepCount.toString().toString() + "nВремя: " + time
-        alertbox.setMessage(TextToast)
+        val builder = AlertDialog.Builder(this,R.style.CustomAlertDialog)
+            .create()
+        val view = layoutInflater.inflate(R.layout.dialog_fragment,null)
+        val  buttonYes = view.findViewById<Button>(R.id.btDialogYes)
+        val  buttonNo = view.findViewById<Button>(R.id.btDialogNO)
+        val  score = view.findViewById<TextView>(R.id.tvDialogScore)
+        score.text = "Игра закончена за ${stepCount} ходов" + "\n"+ "Время игры: $time "
+        val sharedPref = getSharedPreferences("highScore",Context.MODE_PRIVATE)
+        val editor = sharedPref.edit()
+        editor.apply {
+                        putInt("step",stepCount)
+                        putString("time", mTimeScreen.text.toString())
+                        apply()
+                    }
 
-        // Добавляем кнопку
-        alertbox.setNeutralButton(
-            "Ok",
-            DialogInterface.OnClickListener { arg0, arg1 -> // закрываем текущюю Activity
-                finish()
-            })
-        // показываем окно
-        alertbox.show()
+        builder.setView(view)
+        buttonYes.setOnClickListener {
+            recreate()
+            builder.dismiss()
+        }
+        buttonNo.setOnClickListener {
+            finish()
+        }
+        builder.setCanceledOnTouchOutside(false)
+        builder.show()
+
     }
     }
