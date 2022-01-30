@@ -28,10 +28,6 @@ class StartActivity : AppCompatActivity() {
             val intent = Intent(this,SettingsActivity::class.java)
             startActivity(intent)
         }
-        butScore = findViewById(R.id.butScore)
-        butScore.setOnClickListener {
-            val intent = Intent(this,HighScoreActivity::class.java)
-            startActivity(intent)
-        }
+
     }
 }
